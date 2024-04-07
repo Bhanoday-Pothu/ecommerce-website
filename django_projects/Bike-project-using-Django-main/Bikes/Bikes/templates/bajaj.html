@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="text-center text-success"><font color="#61EFEB">Bajaj Bikes</font></h1>
+{% for i in mylist %}
+          <div class="container" align="center">
+          <div class="gallery">
+              <a target="_blank" href="{{i.0}}"><font color="#61EFEB">Bike Name:</font><b class="text-primary"><font color="gold">{{i.2}}</font></b><br>
+                <img src="{{i.3}}" alt="Cinque Terre" >
+              </a><br>
+              <i><font color="#61EFEB">price:</font><b><font color="tomato">{{i.1}}</font></b> </i>
+            </div>
+          </div>
+          {% endfor %}
+
+{% endblock content %}
